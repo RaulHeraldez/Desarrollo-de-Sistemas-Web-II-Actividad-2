@@ -1,0 +1,59 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Carrito de Compra - Tienda Sara</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">Tienda Sara</a>
+    </div>
+</nav>
+
+<div class="container py-5">
+    <h2 class="text-center mb-4">Carrito de Compra</h2>
+
+    <table class="table table-bordered text-center">
+        <thead class="table-dark">
+            <tr>
+                <th>Producto</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th>Subtotal</th>
+                <th>Acción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>rosa-sudadera</td>
+                <td>$1200</td>
+                <td><input type="number" value="1" min="1" class="form-control text-center"></td>
+                <td>$1200</td>
+                <td><button class="btn btn-danger btn-sm">Eliminar</button></td>
+            </tr>
+            <tr>
+                <td>puma-tenis</td>
+                <td>$2100</td>
+                <td><input type="number" value="1" min="1" class="form-control text-center"></td>
+                <td>$2100</td>
+                <td><button class="btn btn-danger btn-sm">Eliminar</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Resumen del pedido -->
+    <div class="text-end">
+        <p><strong>Subtotal:</strong> $3300</p>
+        <p><strong>Impuestos:</strong> $0</p>
+        <p><strong>Total:</strong> $3300</p>
+        <button class="btn btn-success">Proceder al Pago</button>
+    </div>
+</div>
+
+<script src="js/bootstrap.bundle.js"></script>
+</body>
+</html>

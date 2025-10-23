@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda Sara | Inicio</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-color: #f8f9fa;
+    }
+    main {
+      flex: 1;
+    }
+    .navbar {
+      background: linear-gradient(90deg, #007bff, #6610f2);
+    }
+    .search-section {
+      background: #ffffff;
+      padding: 2rem 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .hero-carousel img {
+      height: 450px;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+    .card {
+      border: none;
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .cart-icon {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      background: #ffffff;
+      border-radius: 50%;
+      padding: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      cursor: pointer;
+      font-size: 1.2rem;
+    }
+    footer {
+      background-color: #343a40;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-4" href="#">🛍️ Tienda Sara</a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a href="index.html" class="nav-link active">Inicio</a></li>
+          <li class="nav-item"><a href="galeria.html" class="nav-link">Productos</a></li>
+          <li class="nav-item"><a href="carrito.html" class="nav-link">Carrito</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Buscador -->
+    <section class="search-section text-center">
+      <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-md-6 mb-3 mb-md-0">
+            <div class="input-group">
+              <input type="text" class="form-control form-control-lg" placeholder="Buscar productos...">
+              <button class="btn btn-primary btn-lg">🔍 Buscar</button>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="dropdown">
+              <button class="btn btn-outline-primary btn-lg dropdown-toggle w-100" data-bs-toggle="dropdown">
+                Categoría
+              </button>
+              <ul class="dropdown-menu w-100">
+                <li><a class="dropdown-item" href="galeria.html">Ropa</a></li>
+                <li><a class="dropdown-item" href="galeria.html">Muebles</a></li>
+                <li><a class="dropdown-item" href="galeria.html">Electrónica</a></li>
+                <li><a class="dropdown-item" href="galeria.html">Telefonía</a></li>
+                <li><a class="dropdown-item" href="galeria.html">Joyería</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Carrusel principal -->
+    <div class="container my-5">
+      <div id="hero" class="carousel slide hero-carousel" data-bs-ride="carousel">
+        <div class="carousel-inner rounded-4">
+          <div class="carousel-item active">
+            <img src="img/banner.jpg" class="d-block w-100" alt="Bann1">
+          </div>
+          <div class="carousel-item">
+            <img src="img/banner1.jpg" class="d-block w-100" alt="Bann2">
+          </div>
+          <div class="carousel-item">
+            <img src="img/banner2.jpg" class="d-block w-100" alt="Bann3">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Productos Destacados -->
+    <div class="container my-5">
+      <h2 class="text-center mb-4 fw-bold text-primary">Productos Destacados</h2>
+      <div class="row g-4">
+        <!-- Producto 1 -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card">
+            <img src="img/p1.jpg" class="card-img-top" alt="Blusa Casual">
+            <div class="cart-icon">🛒</div>
+            <div class="card-body text-center">
+              <h6 class="fw-bold">Blusa Casual</h6>
+              <p class="text-muted mb-0">$250.00 MXN</p>
+            </div>
+          </div>
+        </div>
+        <!-- Producto 2 -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card">
+            <img src="img/p2.jpg" class="card-img-top" alt="Audífonos Bluetooth">
+            <div class="cart-icon">🛒</div>
+            <div class="card-body text-center">
+              <h6 class="fw-bold">Audífonos Bluetooth</h6>
+              <p class="text-muted mb-0">$1,299.00 MXN</p>
+            </div>
+          </div>
+        </div>
+        <!-- Producto 3 -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card">
+            <img src="img/p3.jpg" class="card-img-top" alt="Anillo de Plata">
+            <div class="cart-icon">🛒</div>
+            <div class="card-body text-center">
+              <h6 class="fw-bold">Anillo de Oro</h6>
+              <p class="text-muted mb-0">$1,800.00 MXN</p>
+            </div>
+          </div>
+        </div>
+        <!-- Producto 4 -->
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card">
+            <img src="img/p4.jpg" class="card-img-top" alt="Smartphone X10">
+            <div class="cart-icon">🛒</div>
+            <div class="card-body text-center">
+              <h6 class="fw-bold">Smartphone X10</h6>
+              <p class="text-muted mb-0">$5,999.00 MXN</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Pie -->
+  <footer class="text-center">
+    <p class="mb-0">© 2025 Tienda Sara | Síguenos en nuestras redes sociales!</p>
+  </footer>
+
+  <script src="js/bootstrap.bundle.js"></script>
+</body>
+</html>

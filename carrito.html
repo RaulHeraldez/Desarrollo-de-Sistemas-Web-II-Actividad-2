@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda Sara | Carrito</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh; /* Esto mantiene el footer al final */
+      background-color: #f8f9fa;
+    }
+    .navbar {
+      background: linear-gradient(90deg, #007bff, #6610f2);
+    }
+    .cart-container {
+      flex: 1; /* Permite que el contenedor crezca y empuje el footer hacia abajo */
+      margin: 60px auto;
+      width: 85%;
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .cart-item {
+      border-bottom: 1px solid #dee2e6;
+      padding: 15px 0;
+    }
+    .cart-item:last-child {
+      border-bottom: none;
+    }
+    .cart-item img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .cart-summary {
+      background: #f1f3f5;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+    footer {
+      background-color: #343a40;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      margin-top: auto; /* Mantiene el footer al final */
+    }
+    .empty-message {
+      text-align: center;
+      color: #6c757d;
+      padding: 60px 0;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="index.html">Tienda Sara</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#">Carrito</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CONTENEDOR DEL CARRITO -->
+  <div class="cart-container">
+
+    <!-- MENSAJE SI EL CARRITO ESTÁ VACÍO -->
+    <div class="empty-message" id="empty-cart">
+      <p>🛒 Tu carrito está vacío. ¡Explora nuestros productos y encuentra algo que te encante!</p>
+      <a href="galeria.html" class="btn btn-primary mt-3">Ver productos</a>
+    </div>
+
+    <!-- EJEMPLO DE PRODUCTOS EN EL CARRITO (solo diseño visual) -->
+    <div id="cart-items" style="display:none;">
+      <h4 class="mb-4">Tus productos</h4>
+
+      <div class="cart-item row align-items-center">
+        <div class="col-md-2">
+          <!-- Imagen del producto -->
+          <img src="img/p5.jpg" alt="Camiseta Casual">
+        </div>
+        <div class="col-md-4">
+          <h6 class="mb-1">Camiseta Casual</h6>
+          <p class="text-muted mb-0">Talla M - Ropa</p>
+        </div>
+        <div class="col-md-2">
+          <input type="number" class="form-control text-center" value="1" min="1">
+        </div>
+        <div class="col-md-2 text-primary fw-bold">
+          $250 MXN
+        </div>
+        <div class="col-md-2 text-end">
+          <button class="btn btn-outline-danger btn-sm">Eliminar</button>
+        </div>
+      </div>
+
+      <div class="cart-item row align-items-center">
+        <div class="col-md-2">
+          <!-- Imagen del producto -->
+          <img src="img/p27.jpg" alt="Reloj de Lujo">
+        </div>
+        <div class="col-md-4">
+          <h6 class="mb-1">Reloj de Lujo</h6>
+          <p class="text-muted mb-0">Joyería</p>
+        </div>
+        <div class="col-md-2">
+          <input type="number" class="form-control text-center" value="1" min="1">
+        </div>
+        <div class="col-md-2 text-primary fw-bold">
+          $5,900 MXN
+        </div>
+        <div class="col-md-2 text-end">
+          <button class="btn btn-outline-danger btn-sm">Eliminar</button>
+        </div>
+      </div>
+
+      <!-- Resumen del carrito -->
+      <div class="cart-summary mt-4">
+        <div class="d-flex justify-content-between">
+          <p class="fw-bold mb-0">Total:</p>
+          <p class="fw-bold mb-0 text-primary">$6,150 MXN</p>
+        </div>
+        <hr>
+        <div class="text-center mt-3">
+          <button class="btn btn-success px-4">Proceder al pago</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Tienda Sara. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="js/bootstrap.bundle.js"></script>
+  <script>
+    // Simulación visual
+    document.getElementById('empty-cart').style.display = 'none';
+    document.getElementById('cart-items').style.display = 'block';
+  </script>
+</body>
+</html>
